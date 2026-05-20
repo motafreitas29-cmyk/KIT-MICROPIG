@@ -1,4 +1,12 @@
 import { useState } from 'react';
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'lite-vsl': { id?: string; base?: string; aspect?: string; className?: string };
+    }
+  }
+}
 import { Shield, ChevronDown, ChevronUp } from 'lucide-react';
 
 const PAYMENT_LINK = "https://";
@@ -51,6 +59,10 @@ export default function Etapa3() {
           <h1 className="text-2xl sm:text-3xl font-black leading-tight mb-4">
             Atenda com <span className="text-[#c4962a]">segurança, respaldo e profissionalismo</span> usando fichas e documentos prontos — e evite erros que podem custar sua reputação.
           </h1>
+        </div>
+
+        <div className="mb-8 rounded-2xl overflow-hidden">
+          <lite-vsl id="cmpedxgoc00013o6rbf6rhp93" base="https://hostplayvideos.vercel.app" aspect="9/16"></lite-vsl>
         </div>
 
         <div className="space-y-2 mb-8">
