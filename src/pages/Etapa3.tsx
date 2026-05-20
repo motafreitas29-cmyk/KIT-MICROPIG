@@ -108,14 +108,6 @@ export default function Etapa3() {
             >
               🔥 Quero o acesso completo por R$17,00
             </a>
-            <a
-              href={PAYMENT_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full bg-transparent border border-[#c4962a]/30 text-[#d0c8b8] font-medium py-4 rounded-full text-sm hover:border-[#c4962a]/60 transition-all"
-            >
-              Não, obrigado. Quero apenas o básico.
-            </a>
           </div>
 
           <div className="flex items-center justify-center gap-2 mt-4 text-xs text-[#888]">
