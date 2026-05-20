@@ -11,6 +11,24 @@ import { Shield, ChevronDown, ChevronUp, CheckCircle2, Clock } from 'lucide-reac
 
 const PAYMENT_LINK = "https://";
 
+function playDing() {
+  const ctx = new (window.AudioContext || (window as any).webkitAudioContext)();
+  const gain = ctx.createGain();
+  gain.connect(ctx.destination);
+
+  const freqs = [523, 659, 784, 1046];
+  freqs.forEach((freq, i) => {
+    const osc = ctx.createOscillator();
+    osc.connect(gain);
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(freq, ctx.currentTime + i * 0.08);
+    gain.gain.setValueAtTime(0.25, ctx.currentTime + i * 0.08);
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + i * 0.08 + 0.3);
+    osc.start(ctx.currentTime + i * 0.08);
+    osc.stop(ctx.currentTime + i * 0.08 + 0.3);
+  });
+}
+
 const FAQ = [
   { q: 'Preciso saber montar fichas ou documentos?', a: 'Não. Está tudo pronto — você só preenche durante o atendimento.' },
   { q: 'Esse material realmente me protege como profissional?', a: 'Sim. Ele organiza informações e cria um registro formal do atendimento, te protegendo de qualquer questionamento futuro.' },
@@ -148,6 +166,7 @@ export default function Etapa3() {
             href={PAYMENT_LINK}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={playDing}
             className="block w-full bg-gradient-to-r from-[#c4962a] to-[#e8b84b] text-black font-black py-5 rounded-full text-xl hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_rgba(196,150,42,0.6)] mb-3"
           >
             🔥 QUERO MEU KIT AGORA POR R$17,00
