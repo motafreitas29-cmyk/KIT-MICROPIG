@@ -9,7 +9,7 @@ declare global {
 }
 import { Shield, ChevronDown, ChevronUp, CheckCircle2, Clock } from 'lucide-react';
 
-const PAYMENT_LINK = "https://";
+const PAYMENT_LINK = "https://pay.wiapy.com/GCBM8M6BtU";
 
 function playDing() {
   const ctx = new (window.AudioContext || (window as any).webkitAudioContext)();
