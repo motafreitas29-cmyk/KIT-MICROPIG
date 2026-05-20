@@ -81,9 +81,9 @@ export default function Etapa3() {
         </div>
 
         <div className="bg-[#1a1208] border border-[#c4962a]/30 rounded-2xl p-8 text-center mb-6">
-          <p className="text-[#d0c8b8] text-sm mb-1">Acesso imediato por apenas</p>
+          <p className="text-[#d0c8b8] text-sm mb-1">Acesso imediato — Ticket Único</p>
           <p className="text-6xl font-black text-white mb-1">
-            <span className="text-2xl text-[#d0c8b8]">R$</span>12,90
+            <span className="text-2xl text-[#d0c8b8]">R$</span>17,00
           </p>
           <p className="text-[#c4962a] text-xs mb-6 font-semibold">⚡ Oferta exclusiva disponível apenas nesta página</p>
 
