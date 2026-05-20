@@ -153,7 +153,7 @@ export default function Etapa3() {
         <div className="bg-[#1a1208] border-2 border-[#c4962a] rounded-2xl p-8 text-center mb-6 shadow-[0_0_40px_rgba(196,150,42,0.2)]">
           <Countdown />
 
-          <p className="text-[#d0c8b8] text-xs mb-1 uppercase tracking-widest">Acesso imediato · Pagamento único</p>
+          <p className="text-[#d0c8b8] text-xs mb-1 uppercase tracking-widest">📄 Formato digital (PDF) · Acesso imediato · Pagamento único</p>
           <div className="mb-1">
             <p className="text-[#888] text-sm line-through">De R$155,00</p>
             <p className="text-6xl font-black text-white leading-none">
