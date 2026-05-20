@@ -15,6 +15,14 @@ export default function Etapa2({ onNext }: Props) {
           </h1>
         </div>
 
+        <div className="mb-8 rounded-2xl overflow-hidden border border-[#c4962a]/30 shadow-[0_0_30px_rgba(196,150,42,0.15)]">
+          <img
+            src="https://i.postimg.cc/NFZ5rxvy/lever.png"
+            alt="Kit Profissional Micropigmentação"
+            className="w-full h-auto object-cover"
+          />
+        </div>
+
         <div className="bg-[#1a1208] border border-[#c4962a]/20 rounded-2xl p-6 mb-8 text-[#d0c8b8] text-sm sm:text-base leading-relaxed space-y-4">
           <p>Você atende sua cliente, faz um procedimento bonito…</p>
           <p>Mas na hora de registrar informações, <strong className="text-white">tudo fica bagunçado ou incompleto.</strong></p>
