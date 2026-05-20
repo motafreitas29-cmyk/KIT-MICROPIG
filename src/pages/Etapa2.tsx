@@ -7,11 +7,11 @@ export default function Etapa2({ onNext }: Props) {
 
         <div className="text-center mb-8">
           <span className="inline-block bg-[#c4962a]/20 border border-[#c4962a]/40 text-[#c4962a] text-xs font-bold px-4 py-1 rounded-full mb-4 tracking-widest">
-            🔥 ETAPA 2 DE 3
+            🔥 PASSO 2 DE 3
           </span>
           <h1 className="text-2xl sm:text-3xl font-black leading-tight mb-6">
-            A verdade é uma só: não é só fazer um bom procedimento —{' '}
-            <span className="text-[#c4962a]">você precisa estar protegida e parecer profissional em cada detalhe.</span>
+            Uma profissional organizada cobra mais —{' '}
+            <span className="text-[#c4962a]">e a cliente percebe isso na hora.</span>
           </h1>
         </div>
 
@@ -24,22 +24,21 @@ export default function Etapa2({ onNext }: Props) {
         </div>
 
         <div className="bg-[#1a1208] border border-[#c4962a]/20 rounded-2xl p-6 mb-8 text-[#d0c8b8] text-sm sm:text-base leading-relaxed space-y-4">
-          <p>Você atende sua cliente, faz um procedimento bonito…</p>
-          <p>Mas na hora de registrar informações, <strong className="text-white">tudo fica bagunçado ou incompleto.</strong></p>
-          <p>No fundo, você sabe que isso pode dar problema… E pior: <strong className="text-white">passa insegurança.</strong></p>
+          <p>Você faz um procedimento bonito, a cliente fica satisfeita…</p>
+          <p>Mas na hora de registrar as informações, <strong className="text-white">tudo fica anotado de qualquer jeito — ou nem anotado.</strong></p>
+          <p>Sem ficha, sem anamnese, sem termo assinado. Só na memória.</p>
+          <p>E se a cliente voltar com uma dúvida? Ou reclamar de algo? <strong className="text-white">Você não tem como provar nada.</strong></p>
           <div className="border-t border-[#c4962a]/20 pt-4">
-            <p>Foi aí que muitas profissionais perceberam:</p>
-            <p className="text-white font-bold text-lg mt-2">não basta ter técnica — é preciso ter estrutura profissional.</p>
+            <p className="text-white font-bold text-lg">Não basta ter técnica — é preciso ter estrutura.</p>
+            <p className="mt-2">E estrutura começa com <span className="text-[#c4962a] font-bold">documentos certos.</span></p>
           </div>
-          <p>E essa estrutura começa com <span className="text-[#c4962a] font-bold">documentos certos.</span></p>
-          <p>Esse kit foi criado exatamente pra isso: te dar organização, segurança e autoridade no atendimento.</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
           {[
-            { icon: '⚙️', text: 'Atendimento com respaldo e segurança' },
-            { icon: '⚙️', text: 'Mais confiança da cliente em você' },
-            { icon: '⚙️', text: 'Organização total das informações' },
+            { icon: '🛡️', text: 'Atendimento documentado e protegido' },
+            { icon: '💰', text: 'Autoridade para cobrar o que merece' },
+            { icon: '📋', text: 'Dados organizados de cada cliente' },
           ].map((item, i) => (
             <div key={i} className="bg-[#c4962a]/10 border border-[#c4962a]/30 rounded-xl p-4 text-center">
               <p className="text-2xl mb-2">{item.icon}</p>
@@ -50,22 +49,16 @@ export default function Etapa2({ onNext }: Props) {
 
         <div className="bg-[#1a1208] border-2 border-[#c4962a]/40 rounded-2xl p-6 mb-8 text-center">
           <p className="text-white text-lg sm:text-xl font-bold leading-snug">
-            Agora me responde… Se você pudesse usar fichas, anamnese e termos prontos já no seu próximo atendimento por um valor simbólico, você usaria?
+            O kit já está pronto. Tudo o que você precisa fazer é <span className="text-[#c4962a]">baixar e começar a usar.</span>
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="text-center">
           <button
             onClick={onNext}
-            className="flex-1 bg-[#1a1208] border-2 border-[#c4962a]/40 text-[#d0c8b8] font-semibold py-4 px-6 rounded-xl hover:border-[#c4962a] transition-all text-sm"
+            className="w-full bg-gradient-to-r from-[#c4962a] to-[#e8b84b] text-black font-black py-5 px-8 rounded-full text-lg hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(196,150,42,0.4)]"
           >
-            🤔 Quero entender melhor
-          </button>
-          <button
-            onClick={onNext}
-            className="flex-1 bg-gradient-to-r from-[#c4962a] to-[#e8b84b] text-black font-black py-4 px-6 rounded-xl hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(196,150,42,0.4)]"
-          >
-            🔥 Quero usar hoje mesmo →
+            🔥 Quero me organizar de vez →
           </button>
         </div>
 
