@@ -21,7 +21,7 @@ export default function Etapa1({ onNext }: Props) {
 
         <div className="mb-8 rounded-2xl overflow-hidden border border-[#c4962a]/30 shadow-[0_0_30px_rgba(196,150,42,0.15)]">
           <img
-            src="TROCAR_PELA_URL_DA_IMAGEM"
+            src="https://i.postimg.cc/zDHDyK3H/4ee06d40-6be6-44c1-a8b7-0a7d050a74c3.png"
             alt="Kit Profissional Fichas Anamnese Documentos Micropigmentação"
             className="w-full h-auto object-cover"
           />
