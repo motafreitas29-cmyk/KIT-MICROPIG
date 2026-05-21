@@ -39,13 +39,6 @@ const FAQ = [
   { q: 'E se eu não gostar?', a: 'Você tem 7 dias de garantia incondicional. Se não gostar, devolvemos 100% do valor sem perguntas.' },
 ];
 
-const KIT_ITEMS = [
-  { icon: '📋', label: 'Kit Completo de Fichas de Atendimento', value: 'R$47' },
-  { icon: '📝', label: 'Anamnese Profissional Completa', value: 'R$37' },
-  { icon: '🛡️', label: 'Termo de Consentimento Profissional', value: 'R$27' },
-  { icon: '✅', label: 'Checklist de Atendimento Seguro', value: 'R$17' },
-  { icon: '📖', label: 'Guia de Organização para Micropigmentadoras', value: 'R$27' },
-];
 
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
@@ -110,34 +103,6 @@ export default function Etapa3() {
         {/* Video */}
         <div className="mb-8 rounded-2xl overflow-hidden">
           <lite-vsl id="cmpedxgoc00013o6rbf6rhp93" base="https://hostplayvideos.vercel.app" aspect="9/16"></lite-vsl>
-        </div>
-
-        {/* Value Stack */}
-        <div className="bg-[#1a1208] border-2 border-[#c4962a]/50 rounded-2xl p-6 mb-8">
-          <h2 className="text-white font-black text-center text-lg mb-1">O que você leva hoje:</h2>
-          <p className="text-[#d0c8b8] text-xs text-center mb-5">Valor real de cada item separado</p>
-          <div className="space-y-3 mb-5">
-            {KIT_ITEMS.map((item, i) => (
-              <div key={i} className="flex items-center justify-between gap-3">
-                <div className="flex items-center gap-3">
-                  <span className="text-xl flex-shrink-0">{item.icon}</span>
-                  <span className="text-white text-sm font-medium">{item.label}</span>
-                </div>
-                <span className="text-[#c4962a] font-black text-sm flex-shrink-0 line-through opacity-60">{item.value}</span>
-              </div>
-            ))}
-          </div>
-          <div className="border-t border-[#c4962a]/30 pt-4">
-            <div className="flex items-center justify-between">
-              <span className="text-[#d0c8b8] text-sm">Valor total separado:</span>
-              <span className="text-[#d0c8b8] text-sm line-through">R$155,00</span>
-            </div>
-            <div className="flex items-center justify-between mt-1">
-              <span className="text-white font-black text-lg">Você paga hoje:</span>
-              <span className="text-[#c4962a] font-black text-2xl">R$17,00</span>
-            </div>
-            <p className="text-center text-xs text-green-400 mt-2 font-semibold">✅ Você economiza R$138,00</p>
-          </div>
         </div>
 
         {/* FAQ */}
