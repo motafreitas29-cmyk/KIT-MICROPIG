@@ -48,9 +48,11 @@ export default function Etapa2({ onNext }: Props) {
         </div>
 
         <div className="bg-[#1a1208] border-2 border-[#c4962a]/40 rounded-2xl p-6 mb-8 text-center">
-          <p className="text-white text-lg sm:text-xl font-bold leading-snug">
-            O kit já está pronto. Tudo o que você precisa fazer é <span className="text-[#c4962a]">baixar e começar a usar.</span>
+          <p className="text-[#d0c8b8] text-base leading-snug">
+            O kit já está pronto. Tudo o que você precisa fazer é{' '}
+            <span className="text-white font-bold">baixar e começar a usar.</span>
           </p>
+          <p className="text-[#c4962a] font-black text-2xl mt-3">A partir de R$3,99 — acesso imediato.</p>
         </div>
 
         <div className="text-center">
@@ -58,7 +60,7 @@ export default function Etapa2({ onNext }: Props) {
             onClick={onNext}
             className="w-full bg-gradient-to-r from-[#c4962a] to-[#e8b84b] text-black font-black py-5 px-8 rounded-full text-lg hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(196,150,42,0.4)]"
           >
-            🔥 Quero me organizar de vez →
+            🔥 Ver as opções e garantir o meu →
           </button>
         </div>
 
