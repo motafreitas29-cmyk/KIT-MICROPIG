@@ -154,16 +154,24 @@ export default function Etapa3() {
         <Countdown />
 
         {/* Two Offer Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+        <div className="space-y-4 mb-6">
 
           {/* Card Básico */}
-          <div className="bg-[#1a1208] border border-[#c4962a]/40 rounded-2xl p-6 flex flex-col">
-            <p className="text-[#c4962a] text-xs font-bold uppercase tracking-widest mb-2">Essencial</p>
-            <p className="text-white font-black text-4xl mb-1">R$3,99</p>
-            <p className="text-[#888] text-xs mb-4">Pagamento único · PDF</p>
-            <ul className="space-y-2 mb-6 flex-1">
-              {['✅ Ficha de Anamnese completa', '✅ Termo de Consentimento', '✅ Checklist de Atendimento'].map((item, i) => (
-                <li key={i} className="text-[#d0c8b8] text-sm">{item}</li>
+          <div className="bg-[#1a1208] border border-[#c4962a]/30 rounded-2xl p-6">
+            <div className="flex items-center justify-between mb-4">
+              <div>
+                <p className="text-[#888] text-xs uppercase tracking-widest mb-1">Opção 1 — Básico</p>
+                <p className="text-white font-black text-3xl">R$3,99</p>
+                <p className="text-[#888] text-xs">Pagamento único · PDF</p>
+              </div>
+              <div className="text-right">
+                <p className="text-[#d0c8b8] text-xs">3 documentos</p>
+                <p className="text-[#d0c8b8] text-xs">prontos para usar</p>
+              </div>
+            </div>
+            <ul className="space-y-2 mb-5">
+              {['📋 Ficha de Anamnese completa', '🛡️ Termo de Consentimento', '✅ Checklist de Atendimento'].map((item, i) => (
+                <li key={i} className="text-[#d0c8b8] text-sm flex items-center gap-2">{item}</li>
               ))}
             </ul>
             <a
@@ -171,42 +179,60 @@ export default function Etapa3() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={playDing}
-              className="block w-full text-center bg-[#c4962a]/20 border border-[#c4962a] text-[#c4962a] font-black py-4 rounded-full text-base hover:bg-[#c4962a]/30 transition-all"
+              className="block w-full text-center border border-[#c4962a] text-[#c4962a] font-bold py-4 rounded-full text-base hover:bg-[#c4962a]/10 transition-all"
             >
-              Quero por R$3,99 →
+              Quero o básico por R$3,99 →
             </a>
           </div>
 
+          {/* Divisor */}
+          <div className="flex items-center gap-3">
+            <div className="flex-1 h-px bg-[#c4962a]/20"></div>
+            <p className="text-[#c4962a] text-xs font-bold">OU MELHOR AINDA</p>
+            <div className="flex-1 h-px bg-[#c4962a]/20"></div>
+          </div>
+
           {/* Card Completo */}
-          <div className="bg-[#1a1208] border-2 border-[#c4962a] rounded-2xl p-6 flex flex-col relative shadow-[0_0_30px_rgba(196,150,42,0.25)]">
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#c4962a] to-[#e8b84b] text-black text-xs font-black px-4 py-1 rounded-full whitespace-nowrap">
-              ⭐ MAIS POPULAR
+          <div className="bg-[#1a1208] border-2 border-[#c4962a] rounded-2xl p-6 shadow-[0_0_30px_rgba(196,150,42,0.2)]">
+            <div className="flex items-center justify-between mb-1">
+              <span className="bg-gradient-to-r from-[#c4962a] to-[#e8b84b] text-black text-xs font-black px-3 py-1 rounded-full">⭐ MAIS POPULAR</span>
+              <span className="text-green-400 text-xs font-bold">Você economiza R$141</span>
             </div>
-            <p className="text-[#c4962a] text-xs font-bold uppercase tracking-widest mb-2">Kit Completo</p>
-            <div className="mb-1">
-              <p className="text-[#888] text-xs line-through">De R$155,00</p>
-              <p className="text-white font-black text-4xl">R$13,99</p>
+            <div className="flex items-center justify-between mt-3 mb-4">
+              <div>
+                <p className="text-[#888] text-xs uppercase tracking-widest mb-1">Opção 2 — Kit Completo</p>
+                <p className="text-[#888] text-xs line-through">De R$155,00</p>
+                <p className="text-white font-black text-3xl">R$13,99</p>
+                <p className="text-[#888] text-xs">Pagamento único · PDF</p>
+              </div>
+              <div className="text-right">
+                <p className="text-[#c4962a] text-xs font-bold">5 documentos</p>
+                <p className="text-[#c4962a] text-xs font-bold">+ 2 bônus</p>
+              </div>
             </div>
-            <p className="text-[#888] text-xs mb-4">Pagamento único · PDF</p>
-            <ul className="space-y-2 mb-6 flex-1">
+            <p className="text-[#c4962a] text-xs font-semibold mb-3">Tudo do básico, mais:</p>
+            <ul className="space-y-2 mb-5">
               {[
-                '✅ Ficha de Anamnese completa',
-                '✅ Termo de Consentimento',
+                '📋 Ficha de Anamnese completa',
+                '🛡️ Termo de Consentimento',
                 '✅ Checklist de Atendimento',
                 '🎁 Fichas de Atendimento extras',
                 '🎁 Guia de Organização Profissional',
               ].map((item, i) => (
-                <li key={i} className="text-[#d0c8b8] text-sm">{item}</li>
+                <li key={i} className="text-[#d0c8b8] text-sm flex items-center gap-2">{item}</li>
               ))}
             </ul>
+            <p className="text-center text-[#d0c8b8] text-xs mb-4">
+              Por só <span className="text-white font-bold">R$10 a mais</span>, você leva o kit inteiro.
+            </p>
             <a
               href={LINK_COMPLETO}
               target="_blank"
               rel="noopener noreferrer"
               onClick={playDing}
-              className="block w-full text-center bg-gradient-to-r from-[#c4962a] to-[#e8b84b] text-black font-black py-4 rounded-full text-base hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(196,150,42,0.5)]"
+              className="block w-full text-center bg-gradient-to-r from-[#c4962a] to-[#e8b84b] text-black font-black py-5 rounded-full text-lg hover:scale-105 active:scale-95 transition-all shadow-[0_0_30px_rgba(196,150,42,0.5)]"
             >
-              🔥 Quero o completo por R$13,99
+              🔥 Quero o kit completo por R$13,99
             </a>
           </div>
 
