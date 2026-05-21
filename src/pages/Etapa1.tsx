@@ -10,12 +10,12 @@ export default function Etapa1({ onNext }: Props) {
             ⚡ PASSO 1 DE 3
           </span>
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-black leading-tight mb-4">
-            Suas fichas, anamnese e documentos de atendimento —{' '}
-            <span className="text-[#c4962a]">prontos para usar ainda hoje.</span>
+            Fichas, anamnese e documentos profissionais para micropigmentação —{' '}
+            <span className="text-[#c4962a]">por apenas R$3,99.</span>
           </h1>
           <p className="text-[#d0c8b8] text-base sm:text-lg leading-relaxed">
-            Tudo o que você precisa para atender com segurança e parecer profissional desde o primeiro contato com a cliente.<br /><br />
-            Sem criar nada do zero. Sem gastar horas formatando. Só baixar, personalizar e usar — mesmo que esteja começando agora.
+            Tudo pronto para usar ainda hoje. Sem criar nada do zero, sem gastar horas formatando.<br /><br />
+            Por um valor menor que um café, você para de improvisar e começa a atender com postura de profissional valorizada.
           </p>
         </div>
 
@@ -46,12 +46,12 @@ export default function Etapa1({ onNext }: Props) {
         </div>
 
         <div className="text-center">
-          <p className="text-[#d0c8b8] text-base mb-5 font-medium">Quer ver o kit completo? 👇</p>
+          <p className="text-[#d0c8b8] text-base mb-5 font-medium">Quer ver o que está incluído? 👇</p>
           <button
             onClick={onNext}
             className="w-full sm:w-auto bg-gradient-to-r from-[#c4962a] to-[#e8b84b] text-black font-black py-5 px-12 rounded-full text-lg hover:scale-105 active:scale-95 transition-all shadow-[0_0_30px_rgba(196,150,42,0.4)]"
           >
-            Ver o kit completo →
+            Ver o que está incluído →
           </button>
         </div>
 
