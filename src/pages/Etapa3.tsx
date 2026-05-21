@@ -9,7 +9,8 @@ declare global {
 }
 import { Shield, ChevronDown, ChevronUp, CheckCircle2, Clock } from 'lucide-react';
 
-const PAYMENT_LINK = "https://pay.wiapy.com/GCBM8M6BtU";
+const LINK_BASICO = "https://pay.wiapy.com/TROCAR_LINK_399";
+const LINK_COMPLETO = "https://pay.wiapy.com/GCBM8M6BtU";
 
 function playDing() {
   const ctx = new (window.AudioContext || (window as any).webkitAudioContext)();
@@ -149,43 +150,72 @@ export default function Etapa3() {
           </div>
         </div>
 
-        {/* Offer Box */}
-        <div className="bg-[#1a1208] border-2 border-[#c4962a] rounded-2xl p-8 text-center mb-6 shadow-[0_0_40px_rgba(196,150,42,0.2)]">
-          <Countdown />
+        {/* Countdown */}
+        <Countdown />
 
-          <p className="text-[#d0c8b8] text-xs mb-1 uppercase tracking-widest">📄 Formato digital (PDF) · Acesso imediato · Pagamento único</p>
-          <div className="mb-1">
-            <p className="text-[#888] text-sm line-through">De R$155,00</p>
-            <p className="text-6xl font-black text-white leading-none">
-              <span className="text-2xl text-[#d0c8b8]">R$</span>17<span className="text-3xl">,00</span>
-            </p>
+        {/* Two Offer Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+
+          {/* Card Básico */}
+          <div className="bg-[#1a1208] border border-[#c4962a]/40 rounded-2xl p-6 flex flex-col">
+            <p className="text-[#c4962a] text-xs font-bold uppercase tracking-widest mb-2">Essencial</p>
+            <p className="text-white font-black text-4xl mb-1">R$3,99</p>
+            <p className="text-[#888] text-xs mb-4">Pagamento único · PDF</p>
+            <ul className="space-y-2 mb-6 flex-1">
+              {['✅ Ficha de Anamnese completa', '✅ Termo de Consentimento', '✅ Checklist de Atendimento'].map((item, i) => (
+                <li key={i} className="text-[#d0c8b8] text-sm">{item}</li>
+              ))}
+            </ul>
+            <a
+              href={LINK_BASICO}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={playDing}
+              className="block w-full text-center bg-[#c4962a]/20 border border-[#c4962a] text-[#c4962a] font-black py-4 rounded-full text-base hover:bg-[#c4962a]/30 transition-all"
+            >
+              Quero por R$3,99 →
+            </a>
           </div>
-          <p className="text-green-400 text-xs mb-6 font-bold">⚡ 89% de desconto — só nesta página</p>
 
-          <a
-            href={PAYMENT_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={playDing}
-            className="block w-full bg-gradient-to-r from-[#c4962a] to-[#e8b84b] text-black font-black py-5 rounded-full text-xl hover:scale-105 active:scale-95 transition-all shadow-[0_0_40px_rgba(196,150,42,0.6)] mb-3"
-          >
-            🔥 QUERO MEU KIT AGORA POR R$17,00
-          </a>
-
-          <div className="flex items-center justify-center gap-4 text-xs text-[#888] flex-wrap">
-            <div className="flex items-center gap-1">
-              <Shield className="w-3 h-3" />
-              <span>7 dias de garantia</span>
+          {/* Card Completo */}
+          <div className="bg-[#1a1208] border-2 border-[#c4962a] rounded-2xl p-6 flex flex-col relative shadow-[0_0_30px_rgba(196,150,42,0.25)]">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#c4962a] to-[#e8b84b] text-black text-xs font-black px-4 py-1 rounded-full whitespace-nowrap">
+              ⭐ MAIS POPULAR
             </div>
-            <div className="flex items-center gap-1">
-              <CheckCircle2 className="w-3 h-3 text-green-500" />
-              <span>Acesso imediato</span>
+            <p className="text-[#c4962a] text-xs font-bold uppercase tracking-widest mb-2">Kit Completo</p>
+            <div className="mb-1">
+              <p className="text-[#888] text-xs line-through">De R$155,00</p>
+              <p className="text-white font-black text-4xl">R$13,99</p>
             </div>
-            <div className="flex items-center gap-1">
-              <CheckCircle2 className="w-3 h-3 text-green-500" />
-              <span>Pagamento seguro</span>
-            </div>
+            <p className="text-[#888] text-xs mb-4">Pagamento único · PDF</p>
+            <ul className="space-y-2 mb-6 flex-1">
+              {[
+                '✅ Ficha de Anamnese completa',
+                '✅ Termo de Consentimento',
+                '✅ Checklist de Atendimento',
+                '🎁 Fichas de Atendimento extras',
+                '🎁 Guia de Organização Profissional',
+              ].map((item, i) => (
+                <li key={i} className="text-[#d0c8b8] text-sm">{item}</li>
+              ))}
+            </ul>
+            <a
+              href={LINK_COMPLETO}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={playDing}
+              className="block w-full text-center bg-gradient-to-r from-[#c4962a] to-[#e8b84b] text-black font-black py-4 rounded-full text-base hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(196,150,42,0.5)]"
+            >
+              🔥 Quero o completo por R$13,99
+            </a>
           </div>
+
+        </div>
+
+        <div className="flex items-center justify-center gap-4 text-xs text-[#888] flex-wrap mb-6">
+          <div className="flex items-center gap-1"><Shield className="w-3 h-3" /><span>7 dias de garantia</span></div>
+          <div className="flex items-center gap-1"><CheckCircle2 className="w-3 h-3 text-green-500" /><span>Acesso imediato</span></div>
+          <div className="flex items-center gap-1"><CheckCircle2 className="w-3 h-3 text-green-500" /><span>Pagamento seguro</span></div>
         </div>
 
         {/* Social proof note */}
