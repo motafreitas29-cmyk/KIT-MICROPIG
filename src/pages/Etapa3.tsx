@@ -9,7 +9,7 @@ declare global {
 }
 import { Shield, ChevronDown, ChevronUp, CheckCircle2, Clock } from 'lucide-react';
 
-const LINK_BASICO = "https://pay.wiapy.com/TROCAR_LINK_399";
+const LINK_BASICO = "https://checkout.expertacademypro.com.br/escalda-pes-lucrativo_cpy_6a0bc29f814eb_cpy_6a0bc2cd70614";
 const LINK_COMPLETO = "https://pay.wiapy.com/GCBM8M6BtU";
 
 function playDing() {
